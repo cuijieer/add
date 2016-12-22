@@ -1,0 +1,56 @@
+<div class="cart" ng-controller="CartController">
+	<div class="shop-nav">
+		<div class="fixed-top">
+			<div class="shop-lists">
+				<a href="#/" class="shop-lists"></a>
+			</div>
+			<div class="shop-cart">
+				购物车（<span>{{cartlist.length}}</span>）
+			</div>
+		</div>
+	</div>
+	<div class="cart-list">
+		<div class="cart-shop1" ng-repeat="cart in cartlist">
+			<div class="cart-shop2">
+				<div class="checkboxFour fl">
+					<input type="checkbox" ng-checked="checked" ng-model="cart.isCheck">
+				</div>
+				<div class="cart-title fl">
+					<div class="cart-img fl">
+						<img ng-src="{{cart.imgUrl}}" height="100" alt="">
+					</div>
+					<div>{{cart.title}}</div>
+					<div class="unit">
+						<div class="totaled rmb">
+							<p>{{cart.price|currency:"￥"}}</p>
+						</div>
+						<div class="num">
+							<div class="num-box">
+								<button class="operation" ng-click="jian($index)">-</button>
+								<span>×</span><span>{{cart.num}}</span>
+								<button class="operation" ng-click="jia($index)">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="total">
+		<div class="select">
+			<div class="all fl">
+				<div class="checkboxFour fl">
+					<input type="checkbox" ng-model="checked" ng-checked="isCheck" ng-click="change()">
+				</div>
+				全选
+			</div>
+		</div>
+		<div class="total-price">
+			<p>合计：<br><span class="rmb">{{Total.TotalNum*Total.TotalPrice|currency:"￥"}}</span></p>
+		</div>
+		<div class="settle">
+			<button>结&nbsp;算</button>
+		</div>
+	</div>
+</div>
+<div class="place"></div>

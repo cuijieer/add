@@ -1,0 +1,95 @@
+<div ng-controller="ShopController">
+	<!--搜索框-->
+	<div class="shop-nav">
+		<div class="fixed-top">
+			<!--				头部搜索框-->
+			<div class="search-box fl">
+				<div class="search-box-c" style="background-color: #EEE;">
+					<a href="#/shop" class="search-box-a"></a>
+					<div class="search-input">
+						搜索商品/店铺
+					</div>
+				</div>
+			</div>
+			<div class="shop-lists">
+				<a href="#/" class="shop-lists"></a>
+			</div>
+			<!--				筛选-->
+			<div class="search-land">
+				<a href="#/" class="public-a" style="color:#999;">筛选</a>
+			</div>
+		</div>
+	</div>
+	<!--旗舰店logo-->
+	<div class="store-logo">
+		<div class="store-bg">
+			小米官方旗舰店
+			<span class="store-in"></span>
+		</div>
+		<span class="logo">
+			<img src="images/xiaomi-logo.png" alt="">
+		</span>
+	</div>
+	<!--筛选列表-->
+	<div class="screen-list">
+		<div class="screen-public fl">综合</div>
+		<div class="screen-public fl">销量</div>
+		<div class="screen-public fl">价格</div>
+		<div class="screen-public fl">店铺</div>
+		<div class="left-border fl">
+			<img src="images/list-style.png" alt="">
+		</div>
+	</div>
+	<!--商品列表-->
+	<div class="content">
+		<div class="goods-list fl">
+			<div class="goods-ele" ng-repeat="goods in shoplist_l">
+				<img ng-src="{{goods.imgUrl}}" alt="">
+				<div class="goods-title">
+					<div class="goods-title-big">
+						{{goods.title}}
+					</div>
+					<div class="goods-title-sm">
+						<span class="price strong">{{goods.price|currency:"￥"}}</span>
+						<span class="sales">
+							&nbsp;月销
+							<span class="sales-num">{{goods.sales}}</span>笔
+						</span>
+						<a href="javascript:;" ng-click="pushl($index)" class="join-cart"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="goods-list fl">
+			<div class="goods-ele" ng-repeat="goods in shoplist_t">
+				<img ng-src="{{goods.imgUrl}}" alt="">
+				<div class="goods-title">
+					<div class="goods-title-big">
+						{{goods.title}}
+					</div>
+					<div class="goods-title-sm">
+						<span class="price strong">{{goods.price|currency:"￥"}}</span>
+						<span class="sales">
+							&nbsp;月销
+							<span class="sales-num">{{goods.sales}}</span>笔
+						</span>
+						<a href="javascript:;" ng-click="pushr($index)" class="join-cart"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="footer">
+		<div class="footer-list">
+			<a href="">登录</a>
+			<span>|</span>
+			<a href="">注册</a>
+			<span>|</span>
+			<a href="">天猫首页</a>
+			<span>|</span>
+			<a href="">下载客户端</a>
+		</div>
+		<p style="text-align:center;padding:30px 0 22px; color:#/ccc; font-size: 12px">©&nbsp;2003-2016&nbsp;Tmall.com&nbsp;版权所有</p>
+	</div>
+</div>

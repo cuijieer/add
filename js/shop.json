@@ -1,0 +1,59 @@
+[
+	[
+		{
+			"id": 1,
+			"imgUrl": "images/1-l.png",
+			"title": "Xiaomi/小米 红米Note4 高配版",
+			"price": 1199.00,
+			"sales": "4.5万",
+			"num":1
+		},{
+			"id": 1,
+			"imgUrl": "images/2-l.png",
+			"title": "Xiaomi/小米 红米Note4 高配版",
+			"price": 1199.00,
+			"sales": "4.5万",
+			"num":1
+		},{
+			"id": 1,
+			"imgUrl": "images/3-l.png",
+			"title": "Xiaomi/小米 红米Note4 高配版",
+			"price": 1199.00,
+			"sales": "4.5万",
+			"num":1
+		}
+	],
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	[
+		{
+			"id": 1,
+			"imgUrl": "images/1-r.png",
+			"title": "Xiaomi/小米 红米Note4 高配版",
+			"price": 1199.00,
+			"sales": "4.5万",
+			"num":1
+		},{
+			"id": 1,
+			"imgUrl": "images/2-r.png",
+			"title": "Xiaomi/小米 红米Note4 高配版",
+			"price": 1199.00,
+			"sales": "4.5万",
+			"num":1
+		},{
+			"id": 1,
+			"imgUrl": "images/3-r.png",
+			"title": "Xiaomi/小米 红米Note4 高配版",
+			"price": 1199.00,
+			"sales": "4.5万",
+			"num":1
+		}
+	]
+]

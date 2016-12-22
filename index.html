@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>天猫</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
+</head>
+
+<body ng-controller="IndexController">
+	<div class="foot-nav">
+		<div class="bt-nav fl">
+			<a href="#/"></a>
+		</div>
+		<div class="bt-nav fl">
+			<a href="#/shop"></a>
+		</div>
+		<div class="bt-nav fl">
+			<span>{{cartlist.length}}</span>
+			<a href="#/cart"></a>
+		</div>
+	</div>
+	<div id="container" ng-view>
+	</div>
+	<div class="place"></div>
+	<script src="js/app.js"></script>
+	<script>
+//		当页面滚动的时候改变搜索框的背景颜色
+		$(window).scroll( function(){
+			if($(document).scrollTop() < 100){
+				$(".header-fixed").css("background","none");
+			}else if($(document).scrollTop() > 100){
+				$(".header-fixed").css("background","#f32d2d");
+			}
+		});
+	</script>
+</body>
+
+</html>
